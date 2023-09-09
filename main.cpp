@@ -12,12 +12,16 @@ typedef pair<int,int> pii;
 #define FOR(i,a,b) for(int i=(int)a;i<=(int)b;i++)
 
 vector<vi> matrix;
+vi data;
 bool isValidPoint(const vector<vi>& matrix, int x, int y) {
     return (x >= 0 && x < (int)matrix.size()) && ( y>=0 && y<(int)matrix[0].size());
 }
 #include "bfs.cpp"
 #include "dfs.cpp"
-
+#include "binary_search.cpp"
+#include "backtrack.cpp"
+#include "permutation.cpp"
+#include "combination.cpp"
 
 void readInput() {
     std::ios::sync_with_stdio(0);
@@ -28,25 +32,22 @@ void readInput() {
     int n = N;
     while (n--){
         int m = M;
-        vi row;
         while(m--) {
             int t;
             cin>>t;
-            row.PB(t);
+            data.PB(t);
         }
-        matrix.PB(row);
     }
 }
 
 int main() {
     /*
-    3 3 
-    1 0 0
-    0 0 0
-    0 0 1
+    1 3 
+    1 2 2 2 2 3
     */
-    readInput();
-    auto ret = dfs(matrix, MP(0,0), MP(4,4));
-    cout << ret;
+    // readInput();
+    // auto ret = dfs(matrix, MP(0,0), MP(4,4));
+    string result = "";
+    generate_01(5,0,result);
     return 0;
 }

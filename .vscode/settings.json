@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.s": "cpp",
+        "*.puml": "plantuml",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "ranges": "cpp",
+        "span": "cpp"
+    }
+}
