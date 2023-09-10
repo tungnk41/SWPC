@@ -24,30 +24,29 @@ bool isValidPoint(const vector<vi>& matrix, int x, int y) {
 #include "combination.cpp"
 
 void readInput() {
-    std::ios::sync_with_stdio(0);
+    std::ios::sync_with_stdio(false);
     std::cin.tie(0);
     std::cout.tie(0);
     int N,M;
     cin>>N>>M;
-    int n = N;
-    while (n--){
-        int m = M;
-        while(m--) {
-            int t;
-            cin>>t;
-            data.PB(t);
-        }
+    while (N--){
+        do {
+            int a;
+            cin >> a;
+            cout << a;
+        } while (std::cin && std::cin.peek() != '\n');
     }
 }
 
 int main() {
     /*
-    1 3 
+    2 3 
     1 2 2 2 2 3
+    3 4 5 6 7 8
     */
-    // readInput();
+    readInput();
     // auto ret = dfs(matrix, MP(0,0), MP(4,4));
-    string result = "";
-    generate_01(5,0,result);
+    // string result = "";
+    // generate_01(5,0,result);
     return 0;
 }
