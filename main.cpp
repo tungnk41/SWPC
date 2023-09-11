@@ -7,9 +7,13 @@ typedef vector<bool> vb;
 typedef pair<int,int> pii;
 #define F first
 #define S second 
-#define PB push_back
-#define MP make_pair
-#define FOR(i,a,b) for(int i=(int)a;i<=(int)b;i++)
+#define pb push_back
+#define mp make_pair
+#define FOR(i,a,b) for(int i=(int)a;i<=(int)b;++i)
+#define RFOR(i,a,b) for(int i=(int)a;i>=(int)b;--i)
+#define MAX(a,b) (a>b?a:b)
+#define MIN(a,b) (a<b?a:b)
+
 
 vector<vi> matrix;
 vi data;
@@ -22,6 +26,7 @@ bool isValidPoint(const vector<vi>& matrix, int x, int y) {
 #include "backtrack.cpp"
 #include "permutation.cpp"
 #include "combination.cpp"
+#include "custom_sort.cpp"
 
 void readInput() {
     std::ios::sync_with_stdio(false);
@@ -44,9 +49,15 @@ int main() {
     1 2 2 2 2 3
     3 4 5 6 7 8
     */
-    readInput();
-    // auto ret = dfs(matrix, MP(0,0), MP(4,4));
+    // readInput();
+    // auto ret = dfs(matrix, mp(0,0), mp(4,4));
     // string result = "";
     // generate_01(5,0,result);
+    // vector_sort_custom();
+    vi data{1,2,3};
+    vb visited;
+    visited.resize(data.size(),false);
+    vi result;
+    generate_permutation(data, visited, result);
     return 0;
 }

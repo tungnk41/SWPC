@@ -1,0 +1,27 @@
+{
+    "files.associations": {
+        "*.s": "cpp",
+        "*.puml": "plantuml",
+        "random": "cpp",
+        "*.tcc": "cpp",
+        "list": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "ranges": "cpp",
+        "span": "cpp",
+        "stacktrace": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "ostream": "cpp",
+        "functional": "cpp",
+        "iostream": "cpp"
+    }
+}

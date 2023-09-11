@@ -16,7 +16,7 @@ bool bfs(const vector<vi>& matrix, pii start, pii end) {
         FOR(i,-1,1) {
             FOR(j,-1,1) {
                 if(isValidPoint(matrix,x+i,y+j) && !visited[x+i][y+j]) {
-                    q.push(MP(x+i,y+j));
+                    q.push(mp(x+i,y+j));
                     visited[x+i][y+j]=true;
                 }
             }

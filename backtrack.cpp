@@ -8,6 +8,6 @@ void generate_01(int length, int count, string& result) {
     FOR(i,0,1) {
         result += std::to_string(i);
         generate_01(length, count+1,result);
-        result.erase(result.size()-1);
+        result.erase(result.end()-1);
     }
 }
