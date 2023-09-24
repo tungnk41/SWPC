@@ -1,5 +1,6 @@
 
-
+// string result = "";
+// generate_01(5,0,result);
 void generate_01(int length, int count, string& result) {
     if (count == length) {
         cout << result << endl;

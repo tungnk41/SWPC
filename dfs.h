@@ -6,19 +6,24 @@ bool dfs(vector<vi>& matrix, pii start, pii end) {
     while(!s.empty()) {
         auto pos = s.top();
         s.pop();
-        int x = pos.F;
-        int y = pos.S;
         if(pos == end) {
             return true;
         }
-        FOR(i,-1,1) {
-            FOR(j,-1,1) {
-                if(isValidPoint(matrix,x+i, y+j) && !visited[x+i][y+j]) {
-                    s.push(mp(x+i,y+j));
-                    visited[x+i][y+j]=true;
-                }
+        for (auto dir: dirs) {
+            int i = pos.F + +dir[0];
+            int j = pos.S + dir[1];
+            if(isValidPoint(matrix,i, j) && !visited[i][j]) {
+                s.push(mp(i, j));
+                visited[i][j]=true;
             }
         }
     }
     return false;
 }
+
+/*
+    2 3 
+    1 2 2 2 2 3
+    3 4 5 6 7 8
+*/
+// auto ret = dfs(matrix, mp(0,0), mp(4,4));

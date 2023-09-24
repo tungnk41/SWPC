@@ -3,6 +3,7 @@ struct Data {
     int b;
 };
 
+// vector_sort_custom();
 //sort(v.begin(), v.end(), greater<int>());  :  5 4 3 2 1
 //sort(v.begin(), v.end());  :  1 2 3 4 5
 void vector_sort_custom() {

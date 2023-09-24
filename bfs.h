@@ -6,21 +6,25 @@ bool bfs(const vector<vi>& matrix, pii start, pii end) {
     q.push(start);
     visited[start.F][start.S]=true;
     while(!q.empty()) {
-        auto pos = q.back();
+        auto pos = q.front();
         q.pop();
-        int x = pos.F;
-        int y = pos.S;
         if(pos == end) {
             return true;
         }
-        FOR(i,-1,1) {
-            FOR(j,-1,1) {
-                if(isValidPoint(matrix,x+i,y+j) && !visited[x+i][y+j]) {
-                    q.push(mp(x+i,y+j));
-                    visited[x+i][y+j]=true;
-                }
+        for (auto dir: dirs) {
+            int i = pos.F + +dir[0];
+            int j = pos.S + dir[1];
+            if(isValidPoint(matrix,i,j) && !visited[i][j]) {
+                q.push(mp(i,j));
+                visited[i][j]=true;
             }
         }
     }
     return false;
 }
+
+ /*
+    2 3 
+    1 2 2 2 2 3
+    3 4 5 6 7 8
+*/
