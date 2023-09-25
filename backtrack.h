@@ -1,7 +1,11 @@
-
+namespace backtrack{
+    int length = 5;
+    int count = 5;
+    std::string result = "";
+}
 // string result = "";
 // generate_01(5,0,result);
-void generate_01(int length, int count, string& result) {
+void generate_01(int length = backtrack::length, int count = backtrack::count, string& result = backtrack::result) {
     if (count == length) {
         cout << result << endl;
         return;

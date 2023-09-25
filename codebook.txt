@@ -1,0 +1,10 @@
+
+
+- interate - unordered_map
+for (const auto& pair : myMap) {
+        int key = pair.first;
+        const std::string& value = pair.second;
+        std::cout << "Key: " << key << ", Value: " << value << std::endl;
+}
+
+-priority_queue

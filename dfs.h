@@ -1,4 +1,19 @@
-bool dfs(vector<vi>& matrix, pii start, pii end) {
+
+namespace dfsScope {
+    vector<vector<int>> matrix{
+        {1,0,0},
+        {1,1,0},
+        {1,0,1},
+    };
+    pii start{0,0};
+    pii end{1,1};
+
+    bool isValidPoint(const vector<vi>& matrix, int i, int j) {
+        return (i >= 0 && i < (int)matrix.size()) && ( j>=0 && j<(int)matrix[0].size());
+    }
+}
+
+bool dfs(vector<vi>& matrix = dfsScope::matrix, pii start = dfsScope::start, pii end = dfsScope::end) {
     stack<pii> s;
     vector<vb> visited{matrix.size(),vb(matrix[0].size(),false)};
     s.push(start);
@@ -12,7 +27,7 @@ bool dfs(vector<vi>& matrix, pii start, pii end) {
         for (auto dir: dirs) {
             int i = pos.F + +dir[0];
             int j = pos.S + dir[1];
-            if(isValidPoint(matrix,i, j) && !visited[i][j]) {
+            if(dfsScope::isValidPoint(matrix,i, j) && !visited[i][j]) {
                 s.push(mp(i, j));
                 visited[i][j]=true;
             }

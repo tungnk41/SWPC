@@ -14,22 +14,18 @@ typedef pair<int,int> pii;
 #define RFOR(i,a,b) for(int i=(int)a;i>=(int)b;--i)
 #define MAX(a,b) (a>b?a:b)
 #define MIN(a,b) (a<b?a:b)
+#define INF 1e9
 vector<vi> dirs{{1,0},{-1,0},{0,1},{0,-1}};
 
-vector<vi> matrix;
-vi data;
-bool isValidPoint(const vector<vi>& matrix, int i, int j) {
-    return (i >= 0 && i < (int)matrix.size()) && ( j>=0 && j<(int)matrix[0].size());
-}
 
 #include "fast_io.h"
 #include "bfs.h"
 #include "dfs.h"
 #include "binary_search.h"
 #include "backtrack.h"
-#include "permutation.h"
-#include "combination.h"
+#include "permutation-combination.h"
 #include "custom_sort.h"
+#include "dijkstra.h"
 
 
 int main() {
@@ -38,8 +34,9 @@ int main() {
     // readInput();
     // writeFile(abc);
     
-    generate_permutation();
-
+    // generate_permutation();
+    // generate_combination();
+    dijkstra();
     
     return 0;
 }
